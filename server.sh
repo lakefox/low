@@ -1,1 +1,1 @@
-PORT=4000 node ./dist/index
+PORT=4000 HOST=127.0.0.1 node ./dist/index

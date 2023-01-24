@@ -167,4 +167,7 @@
 		padding: 20px;
 		border-radius: 10px;
 	}
+	code {
+		max-width: 100%;
+	}
 </style>
