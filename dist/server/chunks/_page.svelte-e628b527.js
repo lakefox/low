@@ -1,7 +1,7 @@
 import { c as create_ssr_component, e as escape, d as each, f as add_attribute } from './index2-64ea2edd.js';
 
 const css = {
-  code: "nav.svelte-1bqmat3>ul.svelte-1bqmat3>li.svelte-1bqmat3{margin-left:30px;font-size:30px;color:black}#favicon.svelte-1bqmat3.svelte-1bqmat3.svelte-1bqmat3{height:25px;margin-top:-5px;margin-right:5px}main.svelte-1bqmat3.svelte-1bqmat3.svelte-1bqmat3{margin:auto;width:90%;max-width:1100px;margin-top:100px;margin-bottom:100px}.bold.svelte-1bqmat3.svelte-1bqmat3.svelte-1bqmat3{font-family:'Arial Black', Helvetica, sans-serif;font-weight:900}.created.svelte-1bqmat3.svelte-1bqmat3.svelte-1bqmat3{font-size:12px;width:min-content;color:'#eee';margin-top:-20px;float:right}.comment.svelte-1bqmat3.svelte-1bqmat3.svelte-1bqmat3{margin-bottom:20px;border-bottom:#eee 2px solid}.content.svelte-1bqmat3.svelte-1bqmat3.svelte-1bqmat3{margin-bottom:5px}.greybg.svelte-1bqmat3.svelte-1bqmat3.svelte-1bqmat3{background:#eee;padding:20px;border-radius:10px}.whitebg.svelte-1bqmat3.svelte-1bqmat3.svelte-1bqmat3{background:#fff;padding:20px;border-radius:10px}",
+  code: "nav.svelte-sjam0>ul.svelte-sjam0>li.svelte-sjam0{margin-left:30px;font-size:30px;color:black}#favicon.svelte-sjam0.svelte-sjam0.svelte-sjam0{height:25px;margin-top:-5px;margin-right:5px}main.svelte-sjam0.svelte-sjam0.svelte-sjam0{margin:auto;width:90%;max-width:1100px;margin-top:100px;margin-bottom:100px}.bold.svelte-sjam0.svelte-sjam0.svelte-sjam0{font-family:'Arial Black', Helvetica, sans-serif;font-weight:900}.created.svelte-sjam0.svelte-sjam0.svelte-sjam0{font-size:12px;width:min-content;color:'#eee';margin-top:-20px;float:right}.comment.svelte-sjam0.svelte-sjam0.svelte-sjam0{margin-bottom:20px;border-bottom:#eee 2px solid}.content.svelte-sjam0.svelte-sjam0.svelte-sjam0{margin-bottom:5px}.greybg.svelte-sjam0.svelte-sjam0.svelte-sjam0{background:#eee;padding:20px;border-radius:10px}.whitebg.svelte-sjam0.svelte-sjam0.svelte-sjam0{background:#fff;padding:20px;border-radius:10px}code.svelte-sjam0.svelte-sjam0.svelte-sjam0{max-width:100%}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -12,17 +12,17 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `<!-- HEAD_svelte-161rure_START -->${$$result.title = `<title>LOW</title>`, ""}<!-- HEAD_svelte-161rure_END -->`, ""}
 
-<nav class="${"svelte-1bqmat3"}"><ul class="${"svelte-1bqmat3"}"><li class="${"svelte-1bqmat3"}"><img id="${"favicon"}" src="${"/logo.png"}" alt="${"Logo"}" class="${"svelte-1bqmat3"}"><strong class="${"bold svelte-1bqmat3"}">LOW</strong></li></ul></nav>
+<nav class="${"svelte-sjam0"}"><ul class="${"svelte-sjam0"}"><li class="${"svelte-sjam0"}"><img id="${"favicon"}" src="${"/logo.png"}" alt="${"Logo"}" class="${"svelte-sjam0"}"><strong class="${"bold svelte-sjam0"}">LOW</strong></li></ul></nav>
 
-<main class="${"svelte-1bqmat3"}"><h1 class="${"bold svelte-1bqmat3"}">Our Sites</h1>
-	<details open><summary class="${"bold svelte-1bqmat3"}">DECODE</summary>
+<main class="${"svelte-sjam0"}"><h1 class="${"bold svelte-sjam0"}">Our Sites</h1>
+	<details open><summary class="${"bold svelte-sjam0"}">DECODE</summary>
 		<p><img src="${"./decode_logo.webp"}" alt="${"Decode Logo"}">
 			DECODE is a website featuring high quality tutorials on programming and other topics. Our goal
 			is to help you learn and grow in your field, whether you&#39;re a beginner or an experienced developer.
 			Our tutorials are carefully crafted to provide you with the knowledge and skills you need to succeed.
 			Explore our diverse range of topics and start learning today!
 		</p></details>
-	<details><summary class="${"bold svelte-1bqmat3"}">HANDY</summary>
+	<details><summary class="${"bold svelte-sjam0"}">HANDY</summary>
 		<p><img src="${"./handy_logo.webp"}" alt="${"Handy Logo"}">
 			Handy is your go-to source for tutorials on everyday tasks like home improvement and car repairs.
 			Our website offers step-by-step guides and videos to help you tackle projects big and small. From
@@ -30,7 +30,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 			reviews and recommendations to help you make informed decisions when purchasing tools and equipment.
 			With Handy, you&#39;ll have the confidence and skills to tackle any project.
 		</p></details>
-	<details><summary class="${"bold svelte-1bqmat3"}">TASTE</summary>
+	<details><summary class="${"bold svelte-sjam0"}">TASTE</summary>
 		<p><img src="${"./taste_logo.webp"}" alt="${"Taste Logo"}">
 			Taste is your ultimate guide to delicious and easy home cooking. Our website offers a wide variety
 			of cooking tutorials, covering everything from quick weeknight meals to more elaborate dishes for
@@ -41,7 +41,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 			providing you with practical and easy recipes that you can make in your own kitchen. Visit Taste
 			today and start cooking like a pro!
 		</p></details>
-	<h1 class="${"bold svelte-1bqmat3"}">API&#39;s</h1>
+	<h1 class="${"bold svelte-sjam0"}">API&#39;s</h1>
 	<p>LOW&#39;s API is the perfect solution for website developers looking to add a commenting feature to
 		their site. With just a few simple requests, developers can easily integrate a powerful
 		commenting system that allows users to post and view comments in real-time.
@@ -59,15 +59,15 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 		your website. With just a few requests, developers can quickly and easily integrate a powerful
 		commenting system that works with any website.
 	</p>
-	<div class="${"greybg svelte-1bqmat3"}"><h3>COMMENTS</h3>
+	<div class="${"greybg svelte-sjam0"}"><h3>COMMENTS</h3>
 		Below is the output of the api.
-		<code>${escape(JSON.stringify(data.comments))}</code>
+		<code class="${"svelte-sjam0"}">${escape(JSON.stringify(data.comments))}</code>
 		<br>
 		<br>
 		<h5>DEMO</h5>
-		<div class="${"whitebg svelte-1bqmat3"}">${each(data.comments, (comment) => {
-    return `<div class="${"comment svelte-1bqmat3"}"><div class="${"content svelte-1bqmat3"}">${escape(comment.contents)}</div>
-						<div class="${"created svelte-1bqmat3"}">${escape(comment.created)}</div>
+		<div class="${"whitebg svelte-sjam0"}">${each(data.comments, (comment) => {
+    return `<div class="${"comment svelte-sjam0"}"><div class="${"content svelte-sjam0"}">${escape(comment.contents)}</div>
+						<div class="${"created svelte-sjam0"}">${escape(comment.created)}</div>
 					</div>`;
   })}
 
@@ -78,4 +78,4 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 });
 
 export { Page as default };
-//# sourceMappingURL=_page.svelte-73d25764.js.map
+//# sourceMappingURL=_page.svelte-e628b527.js.map
