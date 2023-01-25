@@ -10,7 +10,9 @@ function GET({ params, url, request }) {
       let comments = data.items.map((e) => {
         return { contents: e.contents, created: timestamp(e.created), id: e.id };
       });
-      resolve(new Response(JSON.stringify(comments)));
+      let res = new Response(JSON.stringify(comments));
+      res.headers.append("Access-Control-Allow-Origin", "*");
+      resolve(res);
     });
   }).catch(() => {
     throw error(404, "Not found");
@@ -51,4 +53,4 @@ function POST({ params, request }) {
 }
 
 export { GET, POST };
-//# sourceMappingURL=_server-92d98879.js.map
+//# sourceMappingURL=_server-650bdef4.js.map

@@ -10,7 +10,9 @@ export function GET({ params, url, request }) {
             let comments = data.items.map(e => {
                 return { contents: e.contents, created: timestamp(e.created), id: e.id };
             })
-            resolve(new Response(JSON.stringify(comments)));
+            let res = new Response(JSON.stringify(comments));
+            res.headers.append('Access-Control-Allow-Origin', "*");
+            resolve(res);
         });
     }).catch(() => {
         throw error(404, 'Not found');

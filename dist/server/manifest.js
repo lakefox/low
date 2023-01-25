@@ -23,7 +23,7 @@ const manifest = {
 				pattern: /^\/api\/([^/]+?)\/([^/]+?)\/?$/,
 				params: [{"name":"site","optional":false,"rest":false,"chained":false},{"name":"page","optional":false,"rest":false,"chained":false}],
 				page: null,
-				endpoint: () => import('./chunks/_server-92d98879.js')
+				endpoint: () => import('./chunks/_server-650bdef4.js')
 			}
 		],
 		matchers: async () => {
