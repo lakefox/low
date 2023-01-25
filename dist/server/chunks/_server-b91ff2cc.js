@@ -46,11 +46,13 @@ function POST({ params, request }) {
         let comments = data2.items.map((e) => {
           return { contents: e.contents, created: timestamp(e.created), id: e.id };
         });
-        resolve(new Response(JSON.stringify(comments)));
+        let res = new Response(JSON.stringify(comments));
+        res.headers.append("Access-Control-Allow-Origin", "*");
+        resolve(res);
       });
     });
   });
 }
 
 export { GET, POST };
-//# sourceMappingURL=_server-650bdef4.js.map
+//# sourceMappingURL=_server-b91ff2cc.js.map
