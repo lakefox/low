@@ -30,16 +30,27 @@ function timestamp(ts) {
   return mm + "/" + dd + "/" + yyyy;
 }
 function POST({ params, request }) {
-  console.log("posts");
   return new Promise(async (resolve, reject) => {
     let req = await request.json();
-    console.log(req);
     const data = {
       "site": params.site,
       "page": params.page,
       "contents": req.contents
     };
-    pb.collection("comments").create(data).then(() => {
+    if (data.contents.trim() != "") {
+      pb.collection("comments").create(data).then(() => {
+        pb.collection("comments").getList(1, 100, {
+          filter: `site = "${params.site}" && page = "${params.page}"`
+        }).then((data2) => {
+          let comments = data2.items.map((e) => {
+            return { contents: e.contents, created: timestamp(e.created), id: e.id };
+          });
+          let res = new Response(JSON.stringify(comments));
+          res.headers.append("Access-Control-Allow-Origin", "*");
+          resolve(res);
+        });
+      });
+    } else {
       pb.collection("comments").getList(1, 100, {
         filter: `site = "${params.site}" && page = "${params.page}"`
       }).then((data2) => {
@@ -50,9 +61,9 @@ function POST({ params, request }) {
         res.headers.append("Access-Control-Allow-Origin", "*");
         resolve(res);
       });
-    });
+    }
   });
 }
 
 export { GET, POST };
-//# sourceMappingURL=_server-b91ff2cc.js.map
+//# sourceMappingURL=_server-5cffac32.js.map

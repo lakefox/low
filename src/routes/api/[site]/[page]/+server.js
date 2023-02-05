@@ -32,17 +32,27 @@ function timestamp(ts) {
 
 /** @type {import('./$types').RequestHandler} */
 export function POST({ params, request }) {
-    console.log("posts");
     return new Promise(async (resolve, reject) => {
         let req = await request.json();
-        console.log(req);
         const data = {
             "site": params.site,
             "page": params.page,
             "contents": req.contents
         };
-
-        pb.collection('comments').create(data).then(() => {
+        if (data.contents.trim() != "") {
+            pb.collection('comments').create(data).then(() => {
+                pb.collection('comments').getList(1, 100, {
+                    filter: `site = "${params.site}" && page = "${params.page}"`
+                }).then((data) => {
+                    let comments = data.items.map(e => {
+                        return { contents: e.contents, created: timestamp(e.created), id: e.id };
+                    })
+                    let res = new Response(JSON.stringify(comments));
+                    res.headers.append('Access-Control-Allow-Origin', "*");
+                    resolve(res);
+                });
+            });
+        } else {
             pb.collection('comments').getList(1, 100, {
                 filter: `site = "${params.site}" && page = "${params.page}"`
             }).then((data) => {
@@ -53,6 +63,6 @@ export function POST({ params, request }) {
                 res.headers.append('Access-Control-Allow-Origin', "*");
                 resolve(res);
             });
-        });
+        }
     });
 }
